@@ -46,6 +46,7 @@
 	</properties>
 
 	<build>
+		<finalName>${project.artifactId}_${project.activeProfiles[0].id}_${maven.build.timestamp}</finalName><!--最终名字 -->
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -117,6 +118,11 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate</artifactId>
 			<version>3.2.5.ga</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.hibernate</groupId>
